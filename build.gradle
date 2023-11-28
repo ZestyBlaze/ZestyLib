@@ -12,7 +12,7 @@ base {
 
 repositories {
 	maven {
-		name = 'ParchmentMC'
+		name = "ParchmentMC"
 		url = 'https://maven.parchmentmc.org'
 	}
 	maven {
@@ -22,33 +22,9 @@ repositories {
 			includeGroup "com.jamieswhiteshirt"
 		}
 	}
+
 }
 
-loom {
-    runs {
-		// This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
-		datagen {
-			inherit server
-			name "Data Generation"
-			vmArg "-Dfabric-api.datagen"
-			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
-			vmArg "-Dfabric-api.datagen.modid=zestylib"
- 
-			runDir "build/datagen"
-		}
-	}
-}
-
-// Add the generated resources to the main source set
-sourceSets {
-	main {
-		resources {
-			srcDirs += [
-					'src/main/generated'
-			]
-		}
-	}
-}
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -63,6 +39,8 @@ dependencies {
 	}
 
 	include modApi("com.jamieswhiteshirt:reach-entity-attributes:2.4.0")
+
+	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.2.1")))
 }
 
 processResources {
