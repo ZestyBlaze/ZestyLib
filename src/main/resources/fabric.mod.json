@@ -3,22 +3,20 @@
 	"id": "zestylib",
 	"version": "${version}",
 	"name": "ZestyLib",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "My Custom Lib to Help me with Porting Forge Mods",
 	"authors": [
-		"Me!"
+		"ZestyBlaze"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "",
+		"issues": ""
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/zestylib/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"dev.zestyblaze.zestylib.ZestyLib"
-		],
-		"fabric-datagen": [
 		]
 	},
 	"mixins": [
@@ -26,7 +24,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.14.24",
-		"minecraft": "~1.20.1",
+		"minecraft": "~1.20.2",
 		"java": ">=17",
 		"fabric-api": "*"
 	},

@@ -3,5 +3,7 @@ package dev.zestyblaze.zestylib.extensions;
 import net.minecraft.nbt.CompoundTag;
 
 public interface IEntityExtension {
-    CompoundTag getPersistentData();
+    default CompoundTag getPersistentData() {
+        throw new RuntimeException("Mixin hasn't worked");
+    }
 }

@@ -12,5 +12,5 @@ public interface IItemExtension {
      * @param level The level object
      * @param player The player wearing the armor
      */
-    void onArmorTick(ItemStack stack, Level level, Player player);
+    default void onArmorTick(ItemStack stack, Level level, Player player) { }
 }
