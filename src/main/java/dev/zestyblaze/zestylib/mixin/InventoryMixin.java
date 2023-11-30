@@ -14,7 +14,7 @@ public class InventoryMixin {
     @Shadow @Final public Player player;
 
     @Inject(method = "tick", at = @At("TAIL"))
-    private void zestylib$tick(CallbackInfo ci) {
+    private void zestyLib$tick(CallbackInfo ci) {
         player.getArmorSlots().forEach(stack -> stack.getItem().onArmorTick(stack, player.level(), player));
     }
 }

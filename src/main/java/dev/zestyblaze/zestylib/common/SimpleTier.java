@@ -1,11 +1,12 @@
 package dev.zestyblaze.zestylib.common;
 
-import java.util.function.Supplier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.function.Supplier;
 
 /**
  * Helper class to define a custom tier

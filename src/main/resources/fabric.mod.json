@@ -8,8 +8,8 @@
 		"ZestyBlaze"
 	],
 	"contact": {
-		"sources": "",
-		"issues": ""
+		"sources": "https://github.com/ZestyBlaze/ZestyLib",
+		"issues": "https://github.com/ZestyBlaze/ZestyLib/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/zestylib/icon.png",
