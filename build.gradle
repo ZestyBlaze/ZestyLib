@@ -52,6 +52,12 @@ jar {
 	}
 }
 
+configurations.all {
+	resolutionStrategy {
+		force("net.fabricmc:fabric-loader:${project.loader_version}")
+	}
+}
+
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
