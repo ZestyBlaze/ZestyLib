@@ -1,12 +1,9 @@
 package dev.zestyblaze.zestylib.events;
 
-import dev.zestyblaze.zestylib.ZestyLib;
-
 public class ZLEvent {
     private boolean cancelled;
 
     public void cancel() {
-        ZestyLib.LOGGER.warn("Event Canceled");
         setCanceled(true);
     }
 
