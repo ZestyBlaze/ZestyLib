@@ -6,7 +6,8 @@
     "EntityMixin",
     "InventoryMixin",
     "LivingEntityMixin",
-    "MobMixin"
+    "MobMixin",
+    "ServerPlayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

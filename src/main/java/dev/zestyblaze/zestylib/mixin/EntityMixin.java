@@ -15,16 +15,16 @@ public class EntityMixin implements IEntityExtension {
     @Unique private CompoundTag persistentData;
 
     @Inject(method = "saveWithoutId", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;addAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V"))
-    private void zestyLib$saveWithoutId(CompoundTag compound, CallbackInfoReturnable<CompoundTag> cir) {
+    private void zestyLib$saveWithoutId(CompoundTag tag, CallbackInfoReturnable<CompoundTag> cir) {
         if (persistentData != null && !persistentData.isEmpty()) {
-            compound.put("CustomData", persistentData);
+            tag.put("ExtraData", persistentData);
         }
     }
 
     @Inject(method = "load", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V"))
     private void zestyLib$load(CompoundTag tag, CallbackInfo ci) {
-        if (tag.contains("CustomData")) {
-            persistentData = tag.getCompound("CustomData");
+        if (tag.contains("ExtraData")) {
+            persistentData = tag.getCompound("ExtraData");
         }
     }
 

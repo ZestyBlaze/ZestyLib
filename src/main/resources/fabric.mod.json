@@ -38,6 +38,9 @@
 			],
 			"net/minecraft/class_1792": [
 				"dev/zestyblaze/zestylib/extensions/IItemExtension"
+			],
+			"net/minecraft/class_2248": [
+				"dev/zestyblaze/zestylib/extensions/IBlockExtension"
 			]
 		}
 	}
