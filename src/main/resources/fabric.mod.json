@@ -37,6 +37,9 @@
 			"net/minecraft/class_1657": [
 				"dev/zestyblaze/zestylib/extensions/IPlayerExtension"
 			],
+			"net/minecraft/class_1753": [
+				"dev/zestyblaze/zestylib/extensions/IBowItemExtension"
+			],
 			"net/minecraft/class_1792": [
 				"dev/zestyblaze/zestylib/extensions/IItemExtension"
 			],
