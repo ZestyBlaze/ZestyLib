@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "BlockEntityMixin",
+    "BowItemMixin",
     "EntityMixin",
     "InventoryMixin",
     "ItemStackMixin",
