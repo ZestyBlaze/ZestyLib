@@ -58,6 +58,10 @@ configurations.all {
 	}
 }
 
+loom {
+	accessWidenerPath = file("src/main/resources/zestylib.accessWidener")
+}
+
 publishing {
 	publications {
 		mavenJava(MavenPublication) {

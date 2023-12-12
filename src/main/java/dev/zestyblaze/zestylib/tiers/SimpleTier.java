@@ -1,4 +1,4 @@
-package dev.zestyblaze.zestylib.common;
+package dev.zestyblaze.zestylib.tiers;
 
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
