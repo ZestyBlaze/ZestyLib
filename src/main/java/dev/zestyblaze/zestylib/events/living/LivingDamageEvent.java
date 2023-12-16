@@ -1,6 +1,6 @@
 package dev.zestyblaze.zestylib.events.living;
 
-import dev.zestyblaze.zestylib.events.ZLEvent;
+import dev.zestyblaze.zestylib.events.ICancelableEvent;
 import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.EventFactory;
 import net.minecraft.world.damagesource.DamageSource;
@@ -18,27 +18,22 @@ public class LivingDamageEvent {
         void onHurt(HurtEvent event);
     }
 
-    public static class HurtEvent extends ZLEvent {
-        public final LivingEntity damaged;
-        public final DamageSource damageSource;
-        public float damageAmount;
+    public static class HurtEvent extends LivingEvent implements ICancelableEvent {
+        public final DamageSource source;
+        public float amount;
 
-        public HurtEvent(LivingEntity damaged, DamageSource damageSource, float damageAmount) {
-            this.damaged = damaged;
-            this.damageSource = damageSource;
-            this.damageAmount = damageAmount;
-        }
-
-        public LivingEntity getEntity() {
-            return this.damaged;
+        public HurtEvent(LivingEntity entity, DamageSource source, float amount) {
+            super(entity);
+            this.source = source;
+            this.amount = amount;
         }
 
         public DamageSource getSource() {
-            return this.damageSource;
+            return this.source;
         }
 
-        public void setAmount(int amount) {
-            this.damageAmount = amount;
+        public void setAmount(float amount) {
+            this.amount = amount;
         }
     }
 }
