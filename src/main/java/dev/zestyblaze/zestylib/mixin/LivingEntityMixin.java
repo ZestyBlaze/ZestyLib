@@ -2,10 +2,12 @@ package dev.zestyblaze.zestylib.mixin;
 
 import com.llamalad7.mixinextras.sugar.Share;
 import com.llamalad7.mixinextras.sugar.ref.LocalRef;
+import dev.zestyblaze.zestylib.attributes.AttributeRegistry;
 import dev.zestyblaze.zestylib.events.living.LivingDamageEvent;
 import dev.zestyblaze.zestylib.events.living.LivingEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -15,6 +17,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin {
+    @Inject(method = "createLivingAttributes", at = @At("RETURN"))
+    private static void zestyLib$createLivingAttributes(CallbackInfoReturnable<AttributeSupplier.Builder> cir) {
+        cir.getReturnValue().add(AttributeRegistry.STEP_HEIGHT);
+    }
+
     @Inject(method = "tick", at = @At("HEAD"), cancellable = true)
     private void zestyLib$tick(CallbackInfo ci) {
         LivingEvent.LivingTickEvent event = new LivingEvent.LivingTickEvent((LivingEntity)(Object)this);

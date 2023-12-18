@@ -1,9 +1,11 @@
 package dev.zestyblaze.zestylib.mixin;
 
+import dev.zestyblaze.zestylib.attributes.AttributeRegistry;
 import dev.zestyblaze.zestylib.extensions.IEntityExtension;
 import dev.zestyblaze.zestylib.nbt.INBTSerializableCompound;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -15,6 +17,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class EntityMixin implements IEntityExtension, INBTSerializableCompound {
     @Unique private final Entity entity = (Entity)(Object)this;
     @Unique private CompoundTag persistentData;
+
+    @Inject(method = "maxUpStep", at = @At("TAIL"), cancellable = true)
+    public void zestyLib$maxUpStep(CallbackInfoReturnable<Float> cir) {
+        if(entity instanceof LivingEntity) {
+            float baseStepHeight = cir.getReturnValue();
+            cir.setReturnValue(AttributeRegistry.getStepHeight(baseStepHeight, (LivingEntity)(Object)this));
+        }
+    }
 
     @Unique
     @Override
