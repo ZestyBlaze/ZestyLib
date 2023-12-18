@@ -2,7 +2,6 @@ package dev.zestyblaze.zestylib.nbt;
 
 import net.minecraft.nbt.Tag;
 
-// can't inject this because generics
 public interface INBTSerializable<T extends Tag> {
     default T serializeNBT() {
         throw new RuntimeException("Something went wrong somewhere");

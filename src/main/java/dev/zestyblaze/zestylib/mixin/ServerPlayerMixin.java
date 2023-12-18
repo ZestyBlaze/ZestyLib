@@ -18,7 +18,7 @@ public abstract class ServerPlayerMixin extends Player {
     }
 
     @Inject(method = "restoreFrom", at = @At("TAIL"))
-    private void port_lib$copyPersistentData(ServerPlayer oldPlayer, boolean alive, CallbackInfo ci) {
+    private void zestyLib$restoreFrom(ServerPlayer oldPlayer, boolean alive, CallbackInfo ci) {
         CompoundTag oldData = oldPlayer.getPersistentData();
         CompoundTag persistent = oldData.getCompound("PlayerPersisted");
         if (persistent != null) {
