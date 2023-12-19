@@ -2,7 +2,7 @@ package dev.zestyblaze.zestylib.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import dev.zestyblaze.zestylib.events.living.LivingChangeTargetEvent;
+import dev.zestyblaze.zestylib.event.entity.living.LivingChangeTargetEvent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import org.objectweb.asm.Opcodes;

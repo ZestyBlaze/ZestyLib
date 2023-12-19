@@ -1,4 +1,4 @@
-package dev.zestyblaze.zestylib.extensions;
+package dev.zestyblaze.zestylib.common.extensions;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;

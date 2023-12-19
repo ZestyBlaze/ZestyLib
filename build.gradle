@@ -12,7 +12,6 @@ base {
 
 repositories {
 	maven { url "https://maven.parchmentmc.org" } // Parchment
-	maven { url "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
 
 }
 
@@ -22,9 +21,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	mappings loom.layered() {
 		officialMojangMappings()
-		parchment("org.parchmentmc.data:parchment-${project.minecraft_version}:${project.parchment_version}@zip")
+		parchment("org.parchmentmc.data:parchment-1.20.2:${project.parchment_version}@zip")
 	}
-	modApi include("com.jamieswhiteshirt:reach-entity-attributes:${project.rea_version}")
 }
 
 processResources {

@@ -1,7 +1,7 @@
-package dev.zestyblaze.zestylib.events.living;
+package dev.zestyblaze.zestylib.event.entity.living;
 
-import dev.zestyblaze.zestylib.events.ICancelableEvent;
-import dev.zestyblaze.zestylib.events.ZLEvent;
+import dev.zestyblaze.zestylib.event.ICancelableEvent;
+import dev.zestyblaze.zestylib.event.ZLEvent;
 import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.EventFactory;
 import net.minecraft.world.entity.LivingEntity;
@@ -33,4 +33,7 @@ public class LivingEvent extends ZLEvent {
             super(entity);
         }
     }
+
+    // TODO: LivingJumpEvent
+    // https://github.com/neoforged/NeoForge/blob/1.20.x/src/main/java/net/neoforged/neoforge/event/entity/living/LivingEvent.java#L69
 }

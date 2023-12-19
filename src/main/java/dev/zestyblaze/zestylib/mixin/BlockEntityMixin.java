@@ -1,6 +1,6 @@
 package dev.zestyblaze.zestylib.mixin;
 
-import dev.zestyblaze.zestylib.nbt.INBTSerializableCompound;
+import dev.zestyblaze.zestylib.common.util.INBTSerializableCompound;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import org.spongepowered.asm.mixin.Mixin;

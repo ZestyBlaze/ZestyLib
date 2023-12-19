@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class InventoryMixin {
     @Shadow @Final public Player player;
 
-    @Inject(method = "tick", at = @At("TAIL"))
+    @Inject(method = "tick", at = @At("HEAD"))
     private void zestyLib$tick(CallbackInfo ci) {
         player.getArmorSlots().forEach(stack -> stack.getItem().onArmorTick(stack, player.level(), player));
     }

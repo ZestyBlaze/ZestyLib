@@ -1,4 +1,4 @@
-package dev.zestyblaze.zestylib.events;
+package dev.zestyblaze.zestylib.event;
 
 public interface ICancelableEvent {
     default void setCanceled(boolean canceled) {

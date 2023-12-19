@@ -32,19 +32,19 @@
 	"custom": {
 		"loom:injected_interfaces": {
 			"net/minecraft/class_1297": [
-				"dev/zestyblaze/zestylib/extensions/IEntityExtension"
+				"dev/zestyblaze/zestylib/common/extensions/IEntityExtension"
 			],
 			"net/minecraft/class_1657": [
-				"dev/zestyblaze/zestylib/extensions/IPlayerExtension"
+				"dev/zestyblaze/zestylib/common/extensions/IPlayerExtension"
 			],
 			"net/minecraft/class_1753": [
-				"dev/zestyblaze/zestylib/extensions/IBowItemExtension"
+				"dev/zestyblaze/zestylib/common/extensions/IBowItemExtension"
 			],
 			"net/minecraft/class_1792": [
-				"dev/zestyblaze/zestylib/extensions/IItemExtension"
+				"dev/zestyblaze/zestylib/common/extensions/IItemExtension"
 			],
 			"net/minecraft/class_2248": [
-				"dev/zestyblaze/zestylib/extensions/IBlockExtension"
+				"dev/zestyblaze/zestylib/common/extensions/IBlockExtension"
 			]
 		}
 	}

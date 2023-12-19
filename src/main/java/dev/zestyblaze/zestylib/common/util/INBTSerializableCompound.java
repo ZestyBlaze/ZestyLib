@@ -1,4 +1,4 @@
-package dev.zestyblaze.zestylib.nbt;
+package dev.zestyblaze.zestylib.common.util;
 
 import net.minecraft.nbt.CompoundTag;
 
